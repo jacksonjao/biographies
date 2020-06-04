@@ -5,8 +5,55 @@
   display: flex;
 }
 
+.biography-detail{
+  &__block{
+    display: flex;
+    flex-direction: column;
 
-.viewer-basic-info{
-  display: flex;
-  flex-direction: column;
+  }
+
+  &__character-viewer, &__complete-info{
+
+    height: 0;
+    flex: 2;
+  }
+  &__basic-info, &__related{
+    height: 0;
+    flex: 1;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: $tablet-size) {
+  :host-context{
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: $mobile-size) {
+
+  .biography-detail{
+    &__block{
+      all: inherit;
+    }
+
+    &__character-viewer, &__complete-info{
+
+      height: auto;
+    }
+    &__basic-info, &__related{
+      height: auto;
+    }
+
+  }
+  :host-context{
+    @extend .col-sm-12;
+    flex-direction: column;
+
+  }
+
 }

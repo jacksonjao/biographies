@@ -1,0 +1,46 @@
+@import "src/styles";
+:host-context{
+  background: $primary-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.related{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  overflow: hidden;
+
+  &__message{
+    padding: $small-space;
+  }
+  &__title{
+    padding: $small-space  $small-space 0 $small-space ;
+    text-transform: uppercase;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+
+  }
+
+  &__item{
+    margin-top:  $medium-space;
+    margin-bottom: $medium-space;
+    &:not(:first-of-type){
+      padding-left: $small-space/2;
+    }
+    &:first-of-type{
+      padding-left: $small-space;
+    }
+    &:last-of-type{
+      padding-right: $small-space;
+
+    }
+  }
+}
+
+

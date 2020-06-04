@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CharacterModel} from '../../../../../shared/models/character.model';
 
 @Component({
-  selector: 'app-basic-info',
-  templateUrl: './basic-info.component.html',
-  styleUrls: ['./basic-info.component.scss']
+  selector: 'app-complete-info',
+  templateUrl: './complete-info.component.html',
+  styleUrls: ['./complete-info.component.scss']
 })
-export class BasicInfoComponent implements OnInit {
+export class CompleteInfoComponent implements OnInit {
   @Input() character: CharacterModel;
   constructor() { }
 

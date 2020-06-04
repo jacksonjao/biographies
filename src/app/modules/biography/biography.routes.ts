@@ -3,6 +3,8 @@ import {BiographyComponent} from './biography.component';
 import {BiographyDetailComponent} from './pages/biography-detail/biography-detail.component';
 
 const ROUTES: Routes = [
+
+  {path: '',  redirectTo: '/0', pathMatch: 'full'},
   {
     path: '',
     component: BiographyComponent,

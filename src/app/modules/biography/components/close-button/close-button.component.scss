@@ -1,0 +1,54 @@
+@import "src/styles";
+
+#header__menu-button {
+    width: 2.5rem;
+    height: 2rem;
+    top: 1.5625rem;
+    right: 1.5625rem;
+    position: fixed;
+    z-index: 999;
+    padding-top: 0.8rem;
+  }
+
+  #header__menu-button:hover {
+    cursor: pointer;
+  }
+  .menu-icon {
+    content: '';
+    width: 2.5rem;
+    height: 0.4rem;
+    background: $text-color;
+    position: absolute;
+    box-shadow: $secondary-color 2px 2px 5px;
+  }
+
+  .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {
+    @extend .menu-icon;
+    transition: 0.25s;
+  }
+
+  .header__menu-icon {
+    transition: 0.25s;
+  }
+
+  .header__menu-icon:before {
+    top: -0.8rem;
+  }
+
+  .header__menu-icon:after {
+    top: 0.8rem;
+  }
+
+  .header__menu-icon--activated {
+    width: 0;
+  }
+
+  .header__menu-icon--activated:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  .header__menu-icon--activated:after {
+    top: 0;
+    transform: rotate(-135deg);
+  }

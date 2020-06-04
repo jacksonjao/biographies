@@ -1,0 +1,6 @@
+<a [routerLink]="['/'+character.id]" class="collection-avatar" *ngIf="character">
+  <p class="collection-avatar__tooltip">{{character.name}}</p>
+  <figure class="collection-avatar__figure" [style.backgroundImage]="'url('+character.background+')'">
+    <img class="collection-avatar__img" [src]="character.picture" alt="">
+  </figure>
+</a>

@@ -1,1 +1,12 @@
-<p>basic-info works!</p>
+<section class="basic-info col-12" *ngIf="character">
+<h2 class="basic-info__title">Nombre</h2>
+<p class="basic-info__text">{{character.name}}</p>
+  <h2 class="basic-info__title">Profesión</h2>
+  <p class="basic-info__text">{{character.profession}}</p>
+  <h2 class="basic-info__title">Especie</h2>
+  <p class="basic-info__text">{{character.species}}</p>
+  <h2 class="basic-info__title">Pareja</h2>
+  <p class="basic-info__text">{{character.couple}}</p>
+  <h2 class="basic-info__title">Hijos</h2>
+  <p class="basic-info__text">{{character.children}}</p>
+</section>

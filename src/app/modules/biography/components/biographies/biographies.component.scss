@@ -4,9 +4,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  -webkit-box-shadow: 3px 3px 3px  rgba(0,0,0,0.3);
-  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-  box-shadow: 3px 3px 3px  rgba(0,0,0,0.3);
   transition: 0.25s ease-out;
   background: $gradient-color-dark;
 
@@ -29,12 +26,12 @@
   overflow: hidden;
   &__header{
     background: $secondary-color;
-    padding: $small-space;
+    padding: $small-space/2  $small-space;
 
   }
 
   &__title{
-    @include subtitle-font
+    text-transform: uppercase;
   }
 
   &__list{
@@ -50,3 +47,21 @@
     }
   }
 }
+
+
+@media only screen and (max-width: $tablet-size) {
+  :host-context{
+    -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    box-shadow: inherit;
+    &:hover{
+      transform: scale(1);
+      -webkit-box-shadow: inherit;
+      -moz-box-shadow: inherit;
+      box-shadow: inherit;
+    }
+  }
+}
+
+
+

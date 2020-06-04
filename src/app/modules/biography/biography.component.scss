@@ -8,10 +8,57 @@
 
 .biography{
   display: flex;
-  padding: $big-space*1.5;
+  padding: $big-space;
+position: relative;
+  &__button-menu{
+    display: none;
+  }
+  &__list{
+    position: relative;
+    z-index: 1000;
+  }
+
+}
+@media only screen and (max-width: $tablet-size) {
+
+  .biography{
+    padding: $big-space;
+
+    &__button-menu{
+      position: fixed;
+      display: inherit;
+      z-index: 2000;
+
+
+    }
+    &__list{
+      position: fixed;
+      z-index: 1000;
+      width: 80%;
+      height: 80%;
+      transform: translateX(-100%);
+      margin-left: -$big-space;
+      margin-top: -$big-space;
+
+      &--opened{
+        transform: translateX(0);
+        -webkit-box-shadow: 20px 20px 10px rgba(0,0,0,0.3);
+        -moz-box-shadow: 20px 20px 10px rgba(0,0,0,0.3);
+        box-shadow: 20px 20px 10px rgba(0,0,0,0.3);
+      }
+    }
+
+  }
+
 }
 
+@media only screen and (max-width: $mobile-size) {
 
-.biography-information{
-  display: flex;
+  .biography {
+    padding: $big-space 0 0 0;
+    &__list{
+      margin-left: 0;
+    }
+  }
+
 }

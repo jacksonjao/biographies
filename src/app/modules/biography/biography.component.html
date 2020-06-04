@@ -1,5 +1,6 @@
 
 <section class="biography col-12">
-<app-biographies class="col-4"></app-biographies>
+  <app-close-button class="biography__button-menu " [ngClass]="isOpenMenu?'biography__button-menu--opened':''" (action)="openMenu($event)"></app-close-button>
+<app-biographies class="biography__list col-4"  [ngClass]="isOpenMenu?'biography__list--opened':''" [characters]="this.characters"></app-biographies>
 <router-outlet></router-outlet>
 </section>

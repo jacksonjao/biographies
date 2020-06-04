@@ -9,13 +9,19 @@
 
 body{
   background: $gradient-color-light;
-  min-height: 100vh;
   height: 100vh;
-  min-width: 100vw;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
 }
 
 img{
   width: 100%;
+}
+
+@media only screen and (max-width: $mobile-size) {
+
+  body{
+    background: black;
+  }
 }

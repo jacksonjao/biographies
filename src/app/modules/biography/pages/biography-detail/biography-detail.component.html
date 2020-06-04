@@ -1,5 +1,10 @@
 
-<section class="viewer-basic-info col-6">
-<app-character-viewer class="col-12"></app-character-viewer>
-<app-basic-info class="col-12"></app-basic-info>
+<section class="biography-detail__block col-6 col-sm-12">
+<app-character-viewer [character]="character" class="biography-detail__character-viewer col-12"></app-character-viewer>
+<app-basic-info [character]="character"  class="biography-detail__basic-info col-12"></app-basic-info>
+</section>
+
+<section class="biography-detail__block col-6 col-sm-12">
+  <app-complete-info [character]="character"  class="biography-detail__complete-info col-12"></app-complete-info>
+  <app-related [characters]="[character,character,character,character,character]" class="biography-detail__related col-12"></app-related>
 </section>

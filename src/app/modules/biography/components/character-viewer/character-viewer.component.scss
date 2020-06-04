@@ -1,20 +1,27 @@
 @import "src/styles";
 
 :host-context{
-  height: 65.33333333%;
-  background: url("https://i.pinimg.com/originals/38/23/8b/38238b52c6aedc08524a3ac8b3288031.png");
-
+background: $primary-color;
 }
 
 .character-viewer{
   height: 100%;
   width: 100%;
-  background: linear-gradient($secondary-color,transparent, black);
-
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black,transparent,transparent,$secondary-color, black);
+    top: 0;
+  }
   &__figure{
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
   &__img{
@@ -23,26 +30,71 @@
     width: 100%;
     height: 100%;
   }
+
+  &__container-floor{
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    margin-top: -$medium-space *2;
+  }
+
+
+
 }
 
 .character-viewer__floor{
-position: relative;
-  margin-top: -$medium-space *2;
-}
-
-.character-viewer__floor-1{
-  @include trapezium(0.8);
-  opacity: 0.5;
-}
-
-.character-viewer__floor-2{
-  @include trapezium(0.6);
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
   opacity: 0.5;
 
+  &--top{
+    @include trapezium(0.3);
+    animation-name: anim-4;
+  }
+
+  &--medium{
+    @include trapezium(0.5);
+
+    animation-name: anim-3;
+  }
+
+  &--bottom{
+    @include trapezium(0.7);
+    animation-name: anim-2;
+  }
+  &--base{
+    animation-name: anim-1;
+    @include trapezium(0.9);
+  }
 }
 
-.character-viewer__floor-3{
-  @include trapezium(0.4);
-  opacity: 0.5;
+
+
+
+
+
+@keyframes anim-1 {
+  0%   {filter: brightness(0.5)}
+  25% {filter: brightness(1)}
+  100% {filter: brightness(1)}
 }
+
+@keyframes anim-2 {
+  25%   {filter: brightness(0.5)}
+  50% {filter: brightness(1)}
+  100% {filter: brightness(1)}
+}
+
+@keyframes anim-3 {
+  50%   {filter: brightness(0.5)}
+  75% {filter: brightness(1)}
+  100% {filter: brightness(1)}
+}
+
+@keyframes anim-4 {
+  75%   {filter: brightness(0.5)}
+  100% {filter: brightness(1)}
+}
+
 

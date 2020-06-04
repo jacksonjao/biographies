@@ -1,0 +1,19 @@
+@import "src/styles";
+
+:host-context{
+  background: $secondary-color;
+  display: flex;
+  overflow: hidden;
+}
+
+.basic-info{
+  padding: $small-space;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1rem;
+  overflow: auto;
+  &__title{
+    text-align: right;
+  }
+}

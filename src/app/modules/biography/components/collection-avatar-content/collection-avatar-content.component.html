@@ -1,0 +1,7 @@
+<a [routerLink]="['/'+character.id]" routerLinkActive="collection-avatar-content--active" class="collection-avatar-content">
+<figure class="collection-avatar-content__figure" [style.backgroundImage]="'url('+character.background+')'">
+  <img class="collection-avatar-content__img" src="{{character.picture}}" alt="">
+</figure>
+
+<p class="collection-avatar-content__text">{{character.name}} <br>{{character.tvShow}}</p>
+</a>

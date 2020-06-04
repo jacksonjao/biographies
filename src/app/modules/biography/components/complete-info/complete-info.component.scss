@@ -1,0 +1,26 @@
+@import "src/styles";
+
+:host-context{
+  background: $secondary-color;
+  overflow: hidden;
+}
+
+.complete-info{
+  height: 100%;
+  padding: $small-space;
+  overflow: auto;
+  &__title{
+    text-transform: uppercase;
+  }
+  &__text{
+    margin-bottom:  $medium-space;
+  }
+}
+
+
+@media only screen and (max-width: $mobile-size) {
+
+  :host-context{
+    overflow: inherit;
+  }
+}

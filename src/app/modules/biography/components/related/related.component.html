@@ -1,0 +1,13 @@
+
+<section class="related">
+  <h2 class="related__title">related</h2>
+  <ul class="related__list" *ngIf="characters">
+    <li class="related__item" *ngFor="let character of characters">
+      <app-collection-avatar [character]="character"></app-collection-avatar>
+    </li>
+
+  </ul>
+
+  <p class="related__message" *ngIf="!characters">No se encontraron coincidencias</p>
+</section>
+

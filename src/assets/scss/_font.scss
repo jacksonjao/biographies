@@ -2,19 +2,25 @@
 @import "color";
 
 $default-font: 'Poppins', sans-serif;
-@mixin subtitle-font {
+.subtitle-font {
 font-family: $default-font;
   color: $text-color;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 300;
 }
 
-@mixin paragraph-font {
+.paragraph-font {
   font-family: $default-font;
   color: $text-color;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 200;
-
 }
 
+p{
+  @extend .paragraph-font;
+}
+
+h2{
+  @extend .subtitle-font;
+}
 
