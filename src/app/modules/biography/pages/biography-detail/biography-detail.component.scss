@@ -1,0 +1,12 @@
+@import "src/styles";
+
+:host-context{
+  @extend .col-8;
+  display: flex;
+}
+
+
+.viewer-basic-info{
+  display: flex;
+  flex-direction: column;
+}

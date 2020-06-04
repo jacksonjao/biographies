@@ -1,0 +1,47 @@
+@import "src/styles";
+
+
+:host-context {
+  display: flex;
+  position: relative;
+}
+
+.biographies-item {
+
+  display: flex;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, $secondary-color,  transparent);;
+    z-index: 0;
+    transition: 0.25s;
+  }
+
+  &__figure {
+    width: 3.375rem;
+    height: 3.375rem;
+    background: $text-color;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    @include paragraph-font;
+    margin-left: $small-space;
+    color: $text-color;
+    z-index: 1;
+  }
+}
+
+:host-context:hover .biographies-item:before {
+  width: 100%;
+}
+

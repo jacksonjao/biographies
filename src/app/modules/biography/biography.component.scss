@@ -1,0 +1,17 @@
+@import "src/styles";
+
+
+:host-context{
+  display: flex;
+  height: 100%;
+}
+
+.biography{
+  display: flex;
+  padding: $big-space*1.5;
+}
+
+
+.biography-information{
+  display: flex;
+}
